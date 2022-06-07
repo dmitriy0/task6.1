@@ -76,9 +76,9 @@ class ForegroundFragment : Fragment() {
                         while(!Thread.currentThread().isInterrupted){
 
                             if (k % 2 != 0.0) {
-                                sum += BigDecimal(4.0/(k*2 - 1))
+                                sum += BigDecimal(4.0).divide(BigDecimal(k*2 - 1), 1000, 0)
                             } else {
-                                sum -= BigDecimal(4.0/(k*2 - 1))
+                                sum -= BigDecimal(4.0).divide(BigDecimal(k*2 - 1), 1000, 0)
                             }
 
                             if (k % 1000 == 0.0) {
